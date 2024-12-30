@@ -2,13 +2,17 @@
 
 
 
+import { useState } from 'react';
 import { Header } from '../components/Header';
-import { CountContext, CountInitialData } from '../contexts/CounterContext';
+import { CountContext } from '../contexts/CounterContext';
 
 const Page = () =>{
+  const [onlineCount, setOnlineCount] = useState(90);
+
+
   return (
     <div className="container mx-auto">
-      <CountContext.Provider value={CountInitialData} >
+      <CountContext.Provider value={{onlineCount, setOnlineCount}} >
         <Header />
       </CountContext.Provider>
     </div>
