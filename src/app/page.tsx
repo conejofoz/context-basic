@@ -2,6 +2,7 @@
 
 import { Header } from '../components/Header';
 import { CountProvider } from '../contexts/CounterContext';
+import { LoggedUserProvider } from '../contexts/LoggedUser';
 
 const Page = () =>{
 
@@ -11,6 +12,10 @@ const Page = () =>{
       <CountProvider>
         <Header />
       </CountProvider>
+
+      <LoggedUserProvider>
+        <Header />
+      </LoggedUserProvider>
     </div>
   )
 }
