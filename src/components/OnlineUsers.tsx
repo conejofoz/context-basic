@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { CountContext } from "../contexts/CounterContext"
 
 export const OnlineUsers = ()=>{
-    //const count = useContext(CountContext)
     const countCtx = useContext(CountContext)
 
     const handleBanAll = ()=>{
